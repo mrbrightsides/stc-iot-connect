@@ -1,0 +1,105 @@
+{
+  "info": {
+    "name": "STC IoT Connect API",
+    "_postman_id": "d5b0d1a6-0f82-46fb-97de-4b91f0e9a123",
+    "description": "Universal API Gateway for SmartTourismChain IoT integration.\nIncludes booking, device event logging, blockchain transaction, and analytics endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"demo\",\n  \"password\": \"demo123\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/auth/login", "host": ["{{base_url}}"], "path": ["auth", "login"] }
+      }
+    },
+    {
+      "name": "Booking - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"device_id\": \"door-001\",\n  \"user_id\": \"u123\",\n  \"booking_type\": \"hotel\",\n  \"room_number\": \"203\",\n  \"check_in\": \"2025-09-28\",\n  \"check_out\": \"2025-09-30\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/booking", "host": ["{{base_url}}"], "path": ["booking"] }
+      }
+    },
+    {
+      "name": "Device - Log Event",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"device_id\": \"sensor-xyz\",\n  \"event_type\": \"door_unlock\",\n  \"timestamp\": \"2025-09-28T10:15:00Z\"\n}"
+        },
+        "url": { "raw": "{{base_url}}/device/event", "host": ["{{base_url}}"], "path": ["device", "event"] }
+      }
+    },
+    {
+      "name": "Transaction - Get by Hash",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": {
+          "raw": "{{base_url}}/transaction/{{tx_hash}}",
+          "host": ["{{base_url}}"],
+          "path": ["transaction", "{{tx_hash}}"]
+        }
+      }
+    },
+    {
+      "name": "Booking - Verify",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": {
+          "raw": "{{base_url}}/booking/verify/{{user_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["booking", "verify", "{{user_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Analytics - Realtime",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": { "raw": "{{base_url}}/analytics/realtime", "host": ["{{base_url}}"], "path": ["analytics", "realtime"] }
+      }
+    },
+    {
+      "name": "Contract - Call Function",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"contract_address\": \"0x1234567890abcdef\",\n  \"function\": \"balanceOf\",\n  \"params\": [\"0xabc...\"]\n}"
+        },
+        "url": { "raw": "{{base_url}}/contract/call", "host": ["{{base_url}}"], "path": ["contract", "call"] }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "https://stc-connect.streamlit.app/api" },
+    { "key": "token", "value": "" },
+    { "key": "tx_hash", "value": "0xdeadbeef123" },
+    { "key": "user_id", "value": "u123" }
+  ]
+}

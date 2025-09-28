@@ -1,0 +1,176 @@
+openapi: 3.0.3
+info:
+  title: STC IoT Connect API
+  description: >
+    Universal API Gateway for SmartTourismChain IoT integration.
+    Provides booking, device event logging, blockchain interaction,
+    and analytics endpoints.
+  version: 0.1.0
+  contact:
+    name: STC Dev Team
+    url: https://rantai.elpeef.com
+    email: dev@rantai.elpeef.com
+
+servers:
+  - url: https://stc-connect.streamlit.app/api
+    description: Production API
+
+paths:
+  /auth/login:
+    post:
+      summary: Authenticate user
+      description: Returns an access token for API usage.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Authentication successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+  /booking:
+    post:
+      summary: Create on-chain booking
+      description: Instantiates booking from IoT devices (hotel, gate, kiosk).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                device_id: { type: string }
+                user_id: { type: string }
+                booking_type: { type: string }
+                room_number: { type: string }
+                check_in: { type: string, format: date }
+                check_out: { type: string, format: date }
+      responses:
+        "201":
+          description: Booking created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tx_hash: { type: string }
+                  status: { type: string }
+  /device/event:
+    post:
+      summary: Log device event
+      description: Stores an event from IoT devices (e.g. door unlock, sensor).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                device_id: { type: string }
+                event_type: { type: string }
+                timestamp: { type: string, format: date-time }
+      responses:
+        "200":
+          description: Event logged
+  /transaction/{hash}:
+    get:
+      summary: Get transaction details
+      parameters:
+        - in: path
+          name: hash
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Transaction details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hash: { type: string }
+                  status: { type: string }
+                  gas_used: { type: integer }
+  /booking/verify/{user_id}:
+    get:
+      summary: Verify booking ownership
+      parameters:
+        - in: path
+          name: user_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid: { type: boolean }
+  /analytics/realtime:
+    get:
+      summary: Real-time analytics feed
+      description: Returns device usage and booking metrics.
+      responses:
+        "200":
+          description: Analytics data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  concurrent_users: { type: integer }
+                  gas_efficiency: { type: number }
+                  fraud_rate: { type: number }
+  /contract/call:
+    post:
+      summary: Call smart contract
+      description: Executes function on SmartTourismChain contract.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                contract_address: { type: string }
+                function: { type: string }
+                params:
+                  type: array
+                  items: { type: string }
+      responses:
+        "200":
+          description: Smart contract response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result: { type: string }
+                  tx_hash: { type: string }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
