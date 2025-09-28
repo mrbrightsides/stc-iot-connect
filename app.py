@@ -14,30 +14,43 @@ with st.sidebar:
     )
     st.sidebar.markdown("📘 **About**")
     st.sidebar.markdown("""
-    **RANTAI PMS** adalah sistem manajemen properti modern yang dirancang untuk hotel, resort, dan properti hospitality lainnya. Platform ini mengintegrasikan seluruh aspek operasional—mulai dari reservasi, front desk, housekeeping, maintenance, hingga billing dan analytics—dalam satu sistem terpadu.
-
-    Dengan Rantai-PMS, pengelola properti bisa:
+    **STC Connect** adalah middleware API yang menjadi jembatan antara aplikasi, perangkat IoT, dan blockchain dalam ekosistem **SmartTourismChain (STC)**.  
+    Didesain agar developer dan researcher dapat dengan mudah mengintegrasikan fitur **on-chain** maupun **off-chain** ke dalam sistem mereka tanpa harus menulis kode blockchain yang kompleks.  
     
-    - Mengotomasi proses check-in/out dan manajemen kamar secara real-time.
+    ### 🎯 Tujuan Utama
+    - Memudahkan akses ke fungsi blockchain melalui REST API.
+    - Menyediakan antarmuka standar untuk aplikasi, device, dan analitik.
+    - Membantu proses adopsi SmartTourismChain di berbagai use case (pariwisata, edukasi, IoT, smart city, dll).
     
-    - Meningkatkan efisiensi staf melalui mobile apps dan notifikasi otomatis.
+    ### ⚡ Teknologi
+    - **Backend**: Node.js / Python FastAPI (pluggable)  
+    - **Database**: PlaytimeDB (mockup & integration ready)  
+    - **Blockchain**: Ethereum Sepolia Testnet (default)  
+    - **Analytics**: Streamlit + Realtime Dashboard  
     
-    - Memperoleh data analitik lengkap untuk pengambilan keputusan berbasis performa.
+    ### 🌐 Integrasi
+    - **IoT**: Kirim event sensor/log ke blockchain via STC Connect.  
+    - **Booking System**: Catat transaksi booking langsung ke chain.  
+    - **Analytics**: Dapatkan insight real-time untuk monitoring & dashboard.
     
     ---
     #### 🔮 Vision Statement
     
-    Visi kami adalah menjadi platform PMS terdepan yang mendukung operasional properti hospitality secara efisien, modern, dan berkelanjutan.
-
-    Kami bertujuan untuk:
+    **STC Connect** hadir sebagai pintu gerbang untuk mempertemukan **dunia nyata** (aplikasi, device, user) dengan **dunia blockchain**.  
+    Visi kami adalah menjadikan STC Connect sebagai **API Hub** yang sederhana namun powerful, yang bisa dipakai siapa saja: akademisi, developer, bahkan industri.  
     
-    - Menjadi solusi end-to-end bagi pengelola properti dalam menghadapi tantangan operasional dan manajemen.
+    1. **Simplifikasi** → Membuat blockchain integration semudah memanggil REST API.  
+    2. **Kolaborasi** → Menjadi platform terbuka untuk komunitas STC dan RANTAI dalam mengembangkan use case.  
+    3. **Skalabilitas** → Mendukung pertumbuhan ekosistem SmartTourismChain dari skala kecil (mockup) hingga implementasi nyata.  
+    4. **Transparansi** → Menyediakan akses real-time terhadap data transaksi, log IoT, dan analytics untuk memastikan akuntabilitas.  
     
-    - Memberikan pengalaman tamu yang nyaman, cepat, dan personal melalui digitalisasi layanan.
+    ### 🚀 Roadmap
+    - **Phase 1** → Core API (Auth, Booking, Transaction, Analytics).  
+    - **Phase 2** → IoT Integration (event logger + device gateway).  
+    - **Phase 3** → Smart Contract Functions (deploy & call).  
+    - **Phase 4** → Open API Hub (developer & partner contributions).  
     
-    - Mendukung praktik hospitality berkelanjutan dengan monitoring energi, green compliance, dan pelaporan ESG.
-    
-    - Mempermudah pengambilan keputusan bisnis melalui data analytics dan dashboard intuitif.
+    > *Connecting people, devices, and blockchain — seamlessly.*
    
     ---
     ### 🧩 STC Ecosystem
