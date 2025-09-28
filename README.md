@@ -3,6 +3,10 @@
 STC Connect adalah gateway API untuk menghubungkan aplikasi, IoT device, dan sistem blockchain dalam ekosistem SmartTourismChain (STC).
 Dengan STC Connect, developer bisa dengan mudah melakukan login, booking, logging IoT events, cek transaksi blockchain, verifikasi booking, hingga realtime analytics.
 
+[![SWH](https://img.shields.io/badge/archived%20at-Software%20Heritage-orange)](https://archive.softwareheritage.org/browse/directory/824f9ed66775c2764adb15796448bc4994e3982b/?origin_url=https://doi.org/10.5281/zenodo.17216998&path=mrbrightsides-stc-iot-connect-39c932e&release=2&snapshot=f6bdb64ab13314f50b0a3b3211d1c9fdeeddc280)
+[![OpenAIRE](https://img.shields.io/badge/indexed%20by-OpenAIRE-blue)](https://explore.openaire.eu/search/result?pid=10.5281%2Fzenodo.17217000)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17217000.svg)](https://doi.org/10.5281/zenodo.17217000)
+
 ---
 
 ## ✨ Features
