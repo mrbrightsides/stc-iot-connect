@@ -60,7 +60,7 @@ with st.sidebar:
     ---
     #### 🙌 Dukungan & kontributor
     
-    - ⭐ **Star / Fork**: [GitHub repo](https://github.com/mrbrightsides/rantai-pms)
+    - ⭐ **Star / Fork**: [GitHub repo](https://github.com/mrbrightsides/stc-iot-connect)
     - Built with 💙 by [Khudri](https://s.id/khudri)
     - Dukung pengembangan proyek ini melalui: 
       [💖 GitHub Sponsors](https://github.com/sponsors/mrbrightsides) • 
