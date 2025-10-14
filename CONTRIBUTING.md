@@ -23,7 +23,7 @@ Before contributing, ensure you have:
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/stc-iot-connect.git
+   git clone https://github.com/mrbrightsides/stc-iot-connect.git
    cd stc-iot-connect
    ```
 
