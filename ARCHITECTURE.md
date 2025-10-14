@@ -563,5 +563,5 @@ For specific implementation details, refer to:
 ---
 
 **Document Version**: 1.0  
-**Last Updated**: 2024  
-**Maintained By**: STC IoT Connect Team
+**Last Updated**: 2025  
+**Maintained By**: ELPEEF Team
