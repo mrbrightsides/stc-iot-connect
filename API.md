@@ -22,7 +22,7 @@ Content-Type: application/json
 ### Base URL
 
 ```
-Production: https://your-domain.com
+Production: https://stc-connect.com
 Development: http://localhost:3000
 ```
 
