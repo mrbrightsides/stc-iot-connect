@@ -2,7 +2,9 @@
 
 **Enterprise-Grade IoT Gateway & Blockchain Integration Platform for Tourism Industry**
 
-STC IoT Connect is a comprehensive API gateway and SDK suite that bridges physical IoT devices with blockchain smart contracts, enabling secure, scalable interactions for modern tourism infrastructure inside of SmartTourismChain (STC) ecosystem. From QR scanners and smart locks to kiosks and RFID readers, this platform powers the next generation of connected hospitality.
+**Part of the STC Ecosystem** 🌟
+
+STC IoT Connect is a comprehensive API gateway and SDK suite that bridges physical IoT devices with blockchain smart contracts, enabling secure, scalable interactions for modern tourism infrastructure. As a critical component of the **Human Cyber-Physical Systems (HCPS) Tourism 5.0 Framework**, it serves as the infrastructure layer connecting physical devices, cyber systems, human interfaces, and governance mechanisms. From QR scanners and smart locks to kiosks and RFID readers, this platform powers the next generation of connected hospitality.
 
 [![SWH](https://img.shields.io/badge/archived%20at-Software%20Heritage-orange)](https://archive.softwareheritage.org/browse/directory/824f9ed66775c2764adb15796448bc4994e3982b/?origin_url=https://doi.org/10.5281/zenodo.17216998&path=mrbrightsides-stc-iot-connect-39c932e&release=2&snapshot=f6bdb64ab13314f50b0a3b3211d1c9fdeeddc280)
 [![OpenAIRE](https://img.shields.io/badge/indexed%20by-OpenAIRE-blue)](https://explore.openaire.eu/search/result?pid=10.5281%2Fzenodo.17217000)
