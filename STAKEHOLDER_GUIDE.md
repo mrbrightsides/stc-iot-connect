@@ -105,7 +105,7 @@ As a small-medium enterprise (hotel, tour operator, attraction), **STC IoT Conne
 #### Step 1: Access Your Dashboard
 
 ```
-1. Visit: https://your-iot-connect-domain.com
+1. Visit: https://stc-connect.elpeef.com
 2. Login with your SME account
 3. You'll see the main dashboard with 13 tabs
 ```
@@ -367,7 +367,7 @@ As a researcher or academic, **STC IoT Connect** provides rich, real-world data 
 #### Step 1: Request Research Account
 
 ```
-1. Email: research@stc-iot.com
+1. Email: support@elpeef.com
 2. Provide:
    - University affiliation
    - Research topic
@@ -452,7 +452,7 @@ Latencies:
 
 ```bash
 # Export latency data for analysis
-curl -X GET "https://iot-connect/api/research/latency" \
+curl -X GET "https://stc-connect.elpeef.com/api/research/latency" \
   -H "Authorization: Bearer research_key" \
   -o latency_data.csv
 
@@ -505,7 +505,7 @@ Navigate to: Analytics Tab
 
 ```bash
 # Export all device events for statistical analysis
-curl -X POST "https://iot-connect/api/research/export" \
+curl -X POST "https://stc-connect.elpeef.com/api/research/export" \
   -H "Authorization: Bearer research_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -597,10 +597,10 @@ ggplot(data, aes(x=uptime, y=success_rate)) +
 #### Data Citation
 
 ```bibtex
-@misc{stc_iot_connect_2024,
-  author = {STC IoT Connect Research Team},
+@misc{stc_iot_connect_2025,
+  author = {Akhmad Khudri},
   title = {Blockchain-Integrated IoT Device Performance Dataset},
-  year = {2024},
+  year = {2025},
   howpublished = {STC IoT Connect Platform},
   note = {Dataset includes 8,392 device events from 24 IoT devices over 12 months}
 }
@@ -934,10 +934,10 @@ LIMIT 100;
 
 ```bash
 # Switch to backup deployment
-vercel --prod --alias iot-connect-backup.yourdomain.com
+vercel --prod --alias stc-connect.elpeef.com
 
 # Redirect traffic via DNS
-# Update DNS: iot-connect.yourdomain.com → backup server IP
+# Update DNS: stc-connect.elpeef.com → backup server IP
 ```
 
 **2. Database Corruption:**
@@ -1085,16 +1085,11 @@ Response:
 
 | Issue Type | Contact | Response Time |
 |-----------|---------|---------------|
-| **Technical Issues** | support@stc-iot.com | < 2 hours |
-| **Account/Billing** | billing@stc-iot.com | < 24 hours |
-| **Research Inquiries** | research@stc-iot.com | < 48 hours |
-| **Security Concerns** | security@stc-iot.com | < 1 hour |
-| **Integration Help** | integration@stc-iot.com | < 4 hours |
-
-### Emergency Contacts
-
-- **System Outage**: +62-xxx-xxx-xxxx (24/7)
-- **Security Incident**: security-emergency@stc-iot.com (immediate)
+| **Technical Issues** | support@elpeef.com | < 2 hours |
+| **Account/Billing** | info@elpeef.com | < 24 hours |
+| **Research Inquiries** | research@stc-ultimate.elpeef.com | < 48 hours |
+| **Security Concerns** | webmaster@elpeef.com | < 1 hour |
+| **Integration Help** | partners@stc-ultimate.elpeef.com | < 4 hours |
 
 ---
 
